@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="#a42d2d">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:src="@drawable/iconmap" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Satellite Maps View Street Live"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:textSize="@dimen/_16sdp"
+            android:layout_marginLeft="@dimen/_10sdp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/maplayout">
+
+        <fragment
+            android:id="@+id/place_autocomplete_fragment1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment" />
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_below="@+id/place_autocomplete_fragment1"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:id="@+id/map"
+            android:layout_above="@+id/radiolayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:id="@+id/radiolayout1"
+            android:onClick="Normal"
+            android:text="Normal"
+            android:layout_alignParentBottom="true" />
+
+        <RadioButton
+            android:layout_toRightOf="@+id/radiolayout1"
+            android:text="Hybrid"
+            android:onClick="Hybird"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:id="@+id/radiolayout2"
+            android:layout_alignParentBottom="true" />
+
+        <RadioButton
+            android:onClick="Satellite"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/radiolayout2"
+            android:id="@+id/radiolayout3"
+            android:layout_alignParentBottom="true"
+            android:text="Satellite" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/radiolayout3"
+            android:id="@+id/radiolayout4"
+            android:layout_alignParentBottom="true"
+            android:onClick="Terrein"
+            android:text="Terrain" />
+
+    </RelativeLayout>
+</LinearLayout>

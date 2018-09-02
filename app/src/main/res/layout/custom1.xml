@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/imageviewdialog"
+        android:src="@drawable/erroorfinallatest" />
+
+    <TextView
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/dilogimageview"
+        android:text="Yes"
+        android:gravity="center"
+        android:onClick="OK"
+        android:textColor="#1579f1"
+        android:textSize="20dp"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="110dp" />
+
+    <TextView
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/dilogimageview2"
+        android:text="NO"
+        android:gravity="center"
+        android:onClick="NO"
+        android:textColor="#1579f1"
+        android:textSize="20dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="110dp" />
+</FrameLayout>
